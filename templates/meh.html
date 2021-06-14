@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<div id="container">
+		<video autoplay="true"></video>
+	</div>
+	<a href="meh2.html"><button class="btn">Start</button></a>
+	<script type="text/javascript">
+		var video = document.querySelector("video");
+		function startWebCam() {
+			if (navigator.mediaDevices.getUserMedia) {
+				navigator.mediaDevices.getUserMedia({ video: true })
+			    	.then(function (stream) {
+			      		video.srcObject = stream;
+			    	})
+			    	.catch(function (err0r) {
+			      		console.log("Something went wrong!");
+			    	});
+			}
+		}
+		
+		startWebCam();
+		cap.release() 
+        plt.show()
+	</script>
+</body>
+</html>
